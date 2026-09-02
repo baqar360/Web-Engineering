@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Semester Schedule</title>
+</head>
+
+<body>
+
+    <h1>Semester Course Schedule</h1>
+
+    <p>
+        A table of my current semester courses, instructors, and credit hours.
+    </p>
+
+    <hr>
+
+    <table border="1">
+        <!-- <table> holds the entire table. border="1" adds a visible grid (usually done with CSS later, but fine for now) -->
+
+        <caption>Fall Semester - Computer Science</caption>
+        <!-- <caption> gives the table a title, read by screen readers too -->
+
+        <thead>
+            <!-- <thead> groups the header row(s) -->
+            <tr>
+                <!-- <tr> = table row -->
+                <th>Course</th>
+                <!-- <th> = header cell (bold + centered by default). Use for column/row labels -->
+                <th>Instructor</th>
+                <th>Credit Hours</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- <tbody> groups the main data rows, separate from the header -->
+            <tr>
+                <td>Theory of Computation</td>
+                <!-- <td> = table data cell, holds regular content -->
+                <td>Zafar Iqbal</td>
+                <td>3</td>
+                <td>Core</td>
+            </tr>
+            <tr>
+                <td>Database Management Systems</td>
+                <td>Sir Zahid Mehmood</td>
+                <td>4</td>
+                <td>Core</td>
+            </tr>
+            <tr>
+                <td>Probability &amp; Statistics</td>
+                <!-- &amp; is an HTML entity for "&". Special characters like &, <, > need entities in HTML -->
+                <td>Sir Tajamul Hussain</td>
+                <td>3</td>
+                <td>Core</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <!-- <tfoot> groups footer/summary rows -->
+            <tr>
+                <td colspan="2">Total Credit Hours</td>
+                <!-- colspan merges this cell across 2 columns -->
+                <td colspan="2">10</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <hr>
+
+    <h2>Weekly Time Slot Example</h2>
+
+    <table border="1">
+        <caption>Monday Time Slots</caption>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Morning</th>
+                <th>Afternoon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Lecture</th>
+                <!-- <th> can also be used as a ROW label, not just a column header -->
+                <td rowspan="2">Theory of Computation</td>
+                <!-- rowspan merges this cell across 2 rows -->
+                <td>Free</td>
+            </tr>
+            <tr>
+                <th>Lab</th>
+                <td>Database Lab</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

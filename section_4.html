@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me - Feedback Form</title>
+</head>
+
+<body>
+
+    <h1>Contact Me</h1>
+
+    <p>
+        Fill out the form below to get in touch. All required fields are marked with *.
+    </p>
+
+    <hr>
+
+    <form action="#" method="get">
+        <!-- <form> wraps all input elements. action = where data is sent. method = how it's sent (get/post) -->
+        <!-- action="#" is a placeholder since we have no server yet -->
+
+        <h2>Personal Info</h2>
+
+        <label for="name">Full Name *</label>
+        <!-- <label> describes an input. "for" must match the input's "id" — clicking the label focuses the input -->
+        <br>
+        <input type="text" id="name" name="name" placeholder="e.g. Baqar Ali" required>
+        <!-- type="text" = single-line text field. placeholder = greyed-out hint text.
+             required = browser won't submit the form without this filled -->
+
+        <br><br>
+
+        <label for="email">Email Address *</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <!-- type="email" makes the browser validate the format automatically -->
+
+        <br><br>
+
+        <label for="age">Age</label>
+        <br>
+        <input type="number" id="age" name="age" min="10" max="100">
+        <!-- type="number" restricts input to numbers. min/max limit the allowed range -->
+
+        <br><br>
+
+        <h2>Feedback Details</h2>
+
+        <label for="subject">Subject</label>
+        <br>
+        <select id="subject" name="subject">
+            <!-- <select> creates a dropdown menu -->
+            <option value="general">General Inquiry</option>
+            <!-- <option> = one dropdown choice. value = what's actually sent when submitted -->
+            <option value="bug">Report a Bug</option>
+            <option value="feedback">Feedback</option>
+        </select>
+
+        <br><br>
+
+        <p>How did you hear about me?</p>
+        <input type="radio" id="social" name="source" value="social">
+        <label for="social">Social Media</label>
+        <br>
+        <input type="radio" id="friend" name="source" value="friend">
+        <label for="friend">Friend</label>
+        <br>
+        <input type="radio" id="other-source" name="source" value="other">
+        <label for="other-source">Other</label>
+        <!-- Radio buttons with the SAME "name" are grouped — only one can be selected at a time -->
+
+        <br><br>
+
+        <p>Topics you're interested in:</p>
+        <input type="checkbox" id="html" name="interests" value="html">
+        <label for="html">HTML</label>
+        <br>
+        <input type="checkbox" id="ml" name="interests" value="ml">
+        <label for="ml">Machine Learning</label>
+        <br>
+        <input type="checkbox" id="db" name="interests" value="databases">
+        <label for="db">Databases</label>
+        <!-- Checkboxes allow MULTIPLE selections, unlike radio buttons -->
+
+        <br><br>
+
+        <label for="message">Your Message</label>
+        <br>
+        <textarea id="message" name="message" rows="4" cols="40" placeholder="Type your message here..."></textarea>
+        <!-- <textarea> is a multi-line text box. rows/cols set its visible size -->
+
+        <br><br>
+
+        <input type="submit" value="Send Message">
+        <!-- type="submit" creates a button that submits the form -->
+        <input type="reset" value="Clear Form">
+        <!-- type="reset" clears all fields back to default -->
+
+    </form>
+
+</body>
+</html>
