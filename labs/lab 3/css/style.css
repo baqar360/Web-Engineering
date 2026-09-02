@@ -1,0 +1,19 @@
+/* *{
+    background-color: aqua;
+    border : 10px solid yellow;
+} */
+
+.box1{
+    background-color: aqua;
+    padding :20px;
+    border:8px solid blue;
+    margin: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: dotted;
+    text-decoration: overline;
+    text-decoration: wavy;
+    text-decoration: underline;
+    font-size: 20px;
+    text-overflow: ellipsis;
+}

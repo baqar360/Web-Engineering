@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Learning Blog</title>
+</head>
+
+<body>
+
+    <header>
+        <!-- <header> = introductory content, usually a title + navigation. Not the same as <head>! -->
+        <h1>My Learning Blog</h1>
+        <p>Documenting my journey from HTML to Machine Learning.</p>
+
+        <nav>
+            <!-- <nav> = a block of navigation links -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <!-- <main> wraps the PRIMARY content of the page. Only one <main> per page -->
+
+        <section id="articles">
+            <!-- <section> groups a themed chunk of content, usually with its own heading -->
+            <h2>Recent Articles</h2>
+
+            <article>
+                <!-- <article> = a self-contained piece of content (like a blog post) that could stand alone -->
+                <h3>Learning HTML Step by Step</h3>
+                <p>
+                    <time datetime="2026-08-20">August 20, 2026</time>
+                    <!-- <time> marks a human-readable date/time. datetime="" gives the machine-readable version -->
+                </p>
+                <p>
+                    Today I learned how semantic tags make a page more meaningful,
+                    not just visually structured.
+                </p>
+            </article>
+
+            <article>
+                <h3>Why Tables Still Matter</h3>
+                <p>
+                    <time datetime="2026-08-15">August 15, 2026</time>
+                </p>
+                <p>
+                    Tables aren't just for layout anymore — they're perfect for
+                    real tabular data like schedules and comparisons.
+                </p>
+            </article>
+
+        </section>
+
+        <aside>
+            <!-- <aside> = content related but separate from the main flow, like a sidebar -->
+            <h2>Quick Facts</h2>
+            <ul>
+                <li>Currently learning: Semantic HTML</li>
+                <li>Next goal: Advanced HTML</li>
+                <li>Field: Computer Science</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <hr>
+
+    <section id="about">
+        <h2>About This Blog</h2>
+        <p>
+            This blog is a personal record of learning web development
+            from the ground up, one concept at a time.
+        </p>
+    </section>
+
+    <footer>
+        <!-- <footer> = closing content, usually copyright, contact info, or bottom links -->
+        <p><small>&copy; 2026 Baqar Ali. All rights reserved.</small></p>
+        <!-- &copy; is the HTML entity for the © symbol -->
+    </footer>
+
+</body>
+</html>
