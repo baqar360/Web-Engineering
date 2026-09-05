@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Media Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Media Portfolio</h1>
+        <p>A showcase of audio, video, and embedded content examples.</p>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section id="video-section">
+            <h2>Video Example</h2>
+
+            <video width="400" controls poster="https://placehold.co/400x225">
+                <!-- <video> embeds a video. controls adds play/pause/volume UI.
+                     poster = image shown before the video plays -->
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <!-- <source> lets you offer multiple file formats; the browser picks the first one it supports -->
+                Your browser does not support the video tag.
+                <!-- Fallback text shown only if the browser can't play any <source> -->
+            </video>
+
+            <p><small>A sample video with standard playback controls.</small></p>
+        </section>
+
+        <hr>
+
+        <section id="audio-section">
+            <h2>Audio Example</h2>
+
+            <audio controls>
+                <!-- <audio> works just like <video> but for sound only -->
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p><small>Multiple sources ensure playback across different browsers.</small></p>
+        </section>
+
+        <hr>
+
+        <section id="embed-section">
+            <h2>Embedded External Content</h2>
+
+            <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=67.0%2C24.8%2C67.1%2C24.9"
+                width="400"
+                height="300"
+                title="Sample embedded map">
+                <!-- <iframe> embeds another webpage inside this one.
+                     title is required for accessibility — describes what's embedded -->
+            </iframe>
+
+            <p><small>An embedded map using an iframe.</small></p>
+        </section>
+
+        <hr>
+
+        <section id="figure-section">
+            <h2>Image with Caption</h2>
+
+            <figure>
+                <!-- <figure> groups media with its caption as one semantic unit -->
+                <img src="https://placehold.co/300x200" alt="Sample project screenshot" width="300">
+                <figcaption>
+                    <!-- <figcaption> is the caption for the <figure> -->
+                    Figure 1: A placeholder screenshot representing a project preview.
+                </figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 Baqar Ali. Media Portfolio Demo.</small></p>
+    </footer>
+
+</body>
+</html>
