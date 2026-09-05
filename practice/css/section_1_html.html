@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Basics - About Me</title>
+    <link rel="stylesheet" href="section_1_css.css">
+    <!-- <link> connects an EXTERNAL CSS file. rel="stylesheet" tells the browser what kind of file it is.
+         External CSS is preferred because it keeps styling separate from structure,
+         and one CSS file can style MANY HTML pages -->
+</head>
+
+<body>
+
+    <h1 id="main-title">Baqar Ali</h1>
+    <!-- id selectors in CSS start with # and should be UNIQUE per page -->
+
+    <p class="intro">
+        Computer Science student learning web development, one step at a time.
+    </p>
+    <!-- class selectors in CSS start with . and can be reused on MANY elements -->
+
+    <p class="intro">
+        This page demonstrates the three ways CSS can be applied to HTML.
+    </p>
+
+    <p style="color: darkred; font-style: italic;">
+        This line uses INLINE CSS — written directly in the style attribute.
+        It's fast but hard to maintain, and only affects this one element.
+    </p>
+
+    <h2>My Interests</h2>
+
+    <ul>
+        <li class="interest">HTML &amp; CSS</li>
+        <li class="interest">Machine Learning</li>
+        <li class="interest">Databases</li>
+    </ul>
+
+</body>
+</html>

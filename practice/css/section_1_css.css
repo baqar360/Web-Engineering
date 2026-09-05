@@ -1,0 +1,38 @@
+/* section_1_css.css */
+
+/* ELEMENT SELECTOR: targets ALL <body> elements on the page */
+body {
+    font-family: Arial, sans-serif;
+    /* font-family sets the typeface. Listing multiple = fallback order if the first isn't available */
+    background-color: #f4f4f4;
+    /* Colors can be written as names, hex codes (#rrggbb), or rgb(r, g, b) */
+    color: #222222;
+    /* "color" property = TEXT color (not background) */
+}
+
+/* ID SELECTOR: starts with #, matches id="main-title". Should only be used ONCE per page */
+#main-title {
+    color: #2c3e50;
+    text-align: center;
+    /* text-align controls horizontal alignment: left, right, center, justify */
+}
+
+/* CLASS SELECTOR: starts with ., matches class="intro". Can apply to MULTIPLE elements */
+.intro {
+    font-size: 18px;
+    /* font-size sets text size, here in pixels */
+    line-height: 1.5;
+    /* line-height controls spacing between lines of text, improving readability */
+}
+
+/* Targeting a class used on <li> elements */
+.interest {
+    font-weight: bold;
+    /* font-weight controls boldness: normal, bold, or numeric values like 400/700 */
+    color: #27ae60;
+}
+
+/* Grouped selector: apply the same rule to multiple selectors at once, separated by commas */
+h1, h2 {
+    font-family: Georgia, serif;
+}
