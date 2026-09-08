@@ -1,0 +1,55 @@
+/* section_2_css.css */
+
+/* box-sizing changes HOW width/height are calculated.
+   By default, padding and border ADD to the element's width, which gets confusing.
+   border-box makes width/height include padding+border, matching what most people expect. */
+* {
+    box-sizing: border-box;
+    /* * = universal selector, targets EVERY element on the page */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef2f5;
+    padding: 20px;
+    /* padding here adds breathing room between the body's content and the browser edge */
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    /* margin-bottom adds space specifically below this element, pushing the next one down */
+}
+
+.card {
+    width: 300px;
+    /* CONTENT box width (because of border-box, padding/border won't make it bigger than 300px) */
+
+    padding: 20px;
+    /* space INSIDE the border, around the text */
+
+    border: 2px solid #34495e;
+    /* shorthand: border-width border-style border-color */
+
+    margin: 15px auto;
+    /* shorthand: margin-top/bottom = 15px, margin-left/right = auto (centers the box horizontally) */
+
+    background-color: #ffffff;
+    border-radius: 8px;
+    /* rounds the corners of the border */
+}
+
+.highlight {
+    border-color: #e74c3c;
+    /* a SECOND class can add/override specific properties without repeating everything */
+    background-color: #fdf2f0;
+}
+
+/* Demonstrating individual side properties instead of shorthand */
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dddddd;
+    /* you can apply border to just ONE side using border-bottom, border-top, etc. */
+}
