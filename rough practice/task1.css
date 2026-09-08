@@ -1,0 +1,13 @@
+.box1{
+    color:yellow;
+    width:30%;
+    background-color: aqua;
+    display: inline;
+}
+
+.box2{
+    color:rgb(0, 8, 255);
+    width:30%;
+    background-color: rgb(0, 255, 13);
+    display: inline;
+}
