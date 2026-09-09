@@ -1,0 +1,151 @@
+/* =========================================
+   CSS SPECIFICITY
+   ========================================= */
+
+/*
+   Specificity order:
+
+   1. Universal selector       *
+   2. Element selector         div, p, h1
+   3. Class selector           .box
+   4. ID selector              #box1
+   5. Inline style             style="..."
+
+   Higher specificity wins.
+*/
+
+
+/* =========================================
+   1. UNIVERSAL SELECTOR
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   2. ELEMENT SELECTOR
+   ========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   3. CLASS SELECTOR
+   ========================================= */
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 5px solid black;
+}
+
+.box {
+    width: 200px;
+    height: 150px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border: 3px solid black;
+}
+
+
+/* =========================================
+   4. MULTIPLE CLASS SELECTORS
+   ========================================= */
+
+.box2 {
+    background-color: red;
+}
+
+.box3 {
+    background-color: green;
+}
+
+.box4 {
+    background-color: blue;
+}
+
+
+/* =========================================
+   5. ID SELECTOR
+   ========================================= */
+
+/*
+   Both of these rules target Box 1:
+
+   .box {
+       background-color: white;
+   }
+
+   #box1 {
+       background-color: orange;
+   }
+
+   ID has higher specificity than class,
+   so orange wins.
+*/
+
+#box1 {
+    background-color: orange;
+}
+
+
+/* =========================================
+   6. CLASS + ELEMENT SELECTOR
+   ========================================= */
+
+/*
+   This has higher specificity than just:
+
+   .box
+
+   because it contains:
+   - one element selector
+   - one class selector
+*/
+
+div.box {
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   7. ELEMENT + CLASS + CLASS
+   ========================================= */
+
+div.box.box3 {
+    border: 8px solid yellow;
+}
+
+
+/* =========================================
+   8. ID + CLASS
+   ========================================= */
+
+/*
+   This has even higher specificity.
+
+   #box1  -> ID
+   .box   -> CLASS
+*/
+
+#box1.box {
+    border: 8px solid purple;
+}

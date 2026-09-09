@@ -11,3 +11,17 @@
     background-color: rgb(0, 255, 13);
     display: inline;
 }
+.box3{
+     width: 450px;
+    height: 270px;
+    background-color: pink;
+    border-radius: 50%;
+
+    /* Put content inside the oval */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+
+}
