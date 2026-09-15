@@ -1,0 +1,82 @@
+/* section_3_css.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* resetting default margin/padding browsers apply automatically — common real-world practice */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    /* linear-gradient blends two (or more) colors smoothly. "to right" = direction of the blend */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    /* rem = relative to the ROOT element's font-size (default 16px), so 2.5rem = 40px.
+       rem is preferred for font sizes because it stays consistent no matter where it's nested */
+    margin-bottom: 10px;
+}
+
+.banner-subtitle {
+    font-size: 1.2em;
+    /* em = relative to the PARENT element's font-size, not the root.
+       Careful: em compounds when nested (parent em affects child em) */
+}
+
+.content-wrapper {
+    max-width: 800px;
+    /* max-width prevents content from stretching too wide on large screens */
+    margin: 30px auto;
+    /* centers the wrapper horizontally, same trick as Section 2 */
+    padding: 0 20px;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    background-image: url("https://placehold.co/600x400/f4f4f4/f4f4f4");
+    /* background-image sits BEHIND the content; here it's subtle since it matches the card color */
+    background-size: cover;
+    /* cover = image scales to fill the box completely, cropping if needed */
+    background-position: center;
+    /* controls which part of the image is shown/centered */
+
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: offsetX offsetY blurRadius color.
+       rgba() lets you set a color WITH transparency (the 4th value, 0-1) */
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* 50% border-radius on an equal width/height element makes a perfect circle */
+    border: 3px solid #3498db;
+    margin-bottom: 15px;
+}
+
+.quote-box {
+    background-color: #fdf6e3;
+    padding: 20px;
+    border-left: 5px solid #f39c12;
+    /* border-left alone creates a nice "quote accent" look, very common in real designs */
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    /* individual corner radius properties, instead of rounding all 4 corners equally */
+
+    font-style: italic;
+}
