@@ -1,0 +1,88 @@
+/* section_4_css.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    /* fallback chain: browser tries Georgia first, then Times New Roman, then any generic serif font */
+    background-color: #fdfdfd;
+    color: #2c2c2c;
+    line-height: 1.6;
+    /* setting a comfortable line-height on body affects ALL text by default (inherited) */
+}
+
+.post {
+    max-width: 700px;
+    /* narrower max-width than Section 3's card — ideal reading width is roughly 60-75 characters per line */
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.eyebrow {
+    font-family: Arial, sans-serif;
+    /* mixing a sans-serif label with a serif body is a common real design technique */
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /* letter-spacing adds space BETWEEN characters — makes small caps-style text easier to read */
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    /* numeric font-weight: 400 = normal, 700 = bold. More precise than just "bold" keyword */
+    line-height: 1.2;
+    /* headings usually need TIGHTER line-height than body text */
+    margin-bottom: 12px;
+}
+
+.post-meta {
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #777777;
+    margin-bottom: 25px;
+}
+
+.post-lead {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #444444;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.post p {
+    margin-bottom: 16px;
+    text-align: justify;
+    /* justify stretches each line to align both left and right edges, like a printed book/newspaper */
+}
+
+blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: center;
+    color: #34495e;
+    border-left: 4px solid #3498db;
+    padding: 15px 25px;
+    margin: 30px 0;
+}
+
+.post-footer-note {
+    font-size: 0.9rem;
+    color: #888888;
+    text-align: center;
+    margin-top: 40px;
+    text-transform: uppercase;
+    /* text-transform: uppercase forces display in caps WITHOUT changing the actual HTML text */
+}
