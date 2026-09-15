@@ -1,0 +1,12 @@
+a {
+    background-color: yellow;
+}
+
+body {
+    background-color: aqua;
+}
+
+header {
+    background-color: blue;
+    position:sticky
+}
