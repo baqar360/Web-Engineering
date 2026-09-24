@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- viewport meta makes the page render properly on mobile devices -->
+    <meta name="description" content="Personal portfolio of Baqar Ali, a Computer Science student learning web development and Machine Learning.">
+    <!-- description meta is used by search engines for the page preview snippet -->
+    <meta name="author" content="Baqar Ali">
+    <title>Baqar Ali - Portfolio</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Baqar Ali</h1>
+        <p>Computer Science Student &amp; Aspiring ML Engineer</p>
+
+        <nav aria-label="Main navigation">
+            <!-- aria-label gives extra context to screen readers when multiple <nav> elements might exist -->
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article data-category="web">
+                <!-- data-* attributes store custom info in the HTML itself, often read later by JavaScript -->
+                <h3>HTML Learning Series</h3>
+                <p>
+                    <time datetime="2026-09-05">September 5, 2026</time>
+                </p>
+                <p>A 7-part hands-on HTML course covering basics through advanced concepts.</p>
+
+                <details>
+                    <!-- <details> creates a collapsible section, expandable by the user -->
+                    <summary>See what I learned</summary>
+                    <!-- <summary> is the always-visible clickable label for the <details> block -->
+                    <ul>
+                        <li>Semantic structure and page layout</li>
+                        <li>Forms, tables, and multimedia embedding</li>
+                        <li>Accessibility basics</li>
+                    </ul>
+                </details>
+            </article>
+
+            <article data-category="data">
+                <h3>Data Visualization Practice</h3>
+                <p>
+                    <time datetime="2026-07-01">July 2026</time>
+                </p>
+                <p>Explored the Titanic dataset using Matplotlib, Seaborn, and Plotly.</p>
+            </article>
+
+        </section>
+
+        <hr>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML (this course!)</li>
+                <li>Python &amp; SQL</li>
+                <li>Data Analysis Fundamentals</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+
+            <form action="#" method="get">
+                <label for="visitor-name">Name *</label>
+                <br>
+                <input type="text" id="visitor-name" name="visitor-name" required aria-required="true">
+                <!-- aria-required reinforces "required" for assistive tech, even though the browser already enforces it -->
+
+                <br><br>
+
+                <label for="visitor-email">Email *</label>
+                <br>
+                <input type="email" id="visitor-email" name="visitor-email" required>
+
+                <br><br>
+
+                <label for="visitor-message">Message</label>
+                <br>
+                <textarea id="visitor-message" name="visitor-message" rows="4" cols="40"></textarea>
+
+                <br><br>
+
+                <button type="submit">Send Message</button>
+                <!-- <button> works like input type="submit" but can contain richer content (icons, nested text) -->
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>
+            <a href="#top" tabindex="1">Back to top</a>
+            <!-- tabindex controls the keyboard "Tab" navigation order — 1 means "focus this early" -->
+        </p>
+        <p><small>&copy; 2026 Baqar Ali. All rights reserved.</small></p>
+    </footer>
+
+</body>
+</html>

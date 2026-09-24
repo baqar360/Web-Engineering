@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 8.2 — Forms, Custom Forms &amp; Input Groups</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+
+  <div class="container" style="max-width: 640px;">
+    <h2 class="h4 mb-4">Create Account</h2>
+
+    <!-- ============================================================
+         VALIDATION SETUP
+         novalidate        -> disables the browser's native bubble UI
+         needs-validation  -> our JS adds `was-validated` on submit
+         .invalid-feedback -> shown automatically when the sibling
+                              input is :invalid and the form is validated
+         ============================================================ -->
+    <form class="needs-validation" novalidate>
+
+      <!-- Name (required) -->
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full name</label>
+        <input type="text" class="form-control" id="fullName"
+               placeholder="Ali Raza" required>
+        <div class="invalid-feedback">Please enter your full name.</div>
+      </div>
+
+      <!-- Email (required) -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email"
+               placeholder="name@example.com" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+
+      <!-- Country dropdown -->
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <select class="form-select" id="country" required>
+          <option value="" selected disabled>Choose...</option>
+          <option value="pk">Pakistan</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+        <div class="invalid-feedback">Please select a country.</div>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password"
+               placeholder="At least 8 characters" minlength="8" required>
+        <div class="invalid-feedback">Password must be at least 8 characters.</div>
+      </div>
+
+      <!-- Plain checkbox (kept to show the difference) -->
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="terms" required>
+        <label class="form-check-label" for="terms">
+          I agree to the terms and conditions
+        </label>
+        <div class="invalid-feedback">You must accept the terms.</div>
+      </div>
+
+      <!-- CUSTOM SWITCH #1 — role="switch" re-skins the checkbox -->
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="notify">
+        <label class="form-check-label" for="notify">Enable notifications</label>
+      </div>
+
+      <!-- CUSTOM SWITCH #2 -->
+      <div class="form-check form-switch mb-3">
+        <input class="form-check-input" type="checkbox" role="switch" id="newsletter">
+        <label class="form-check-label" for="newsletter">Subscribe to newsletter</label>
+      </div>
+
+      <!-- ============================================================
+           INPUT GROUP
+           .input-group glues the span + input + button into one unit.
+           .input-group-text styles the leading/trailing addon.
+           ============================================================ -->
+      <div class="input-group mb-4">
+        <span class="input-group-text">$</span>
+        <input type="number" class="form-control" id="amount"
+               placeholder="Amount" aria-label="Amount">
+        <button class="btn btn-outline-secondary" type="button">Convert</button>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Create Account</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ============================================================
+       VALIDATION SCRIPT
+       Bootstrap's official pattern: prevent submit if the form is
+       invalid, then add `was-validated` so :invalid fields receive
+       the .is-invalid styling and the .invalid-feedback text shows.
+       ============================================================ -->
+  <script>
+    document.querySelectorAll('.needs-validation').forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();   // stop the actual submission
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  </script>
+</body>
+</html>
